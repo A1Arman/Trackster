@@ -1,45 +1,46 @@
 import React from 'react';
 
-function LeadGenPage() {
+
+function LeadGenPage(props) {
     return (
         <>
             <header role="banner">
                 <h1>Overview</h1>
             </header>
             <section>
-                <form class='signup-form'>
+                <form id='leadgen-form' onSubmit={props.leadGenSubmit}>
                     <div>
-                    <label for="date-applied">Date Applied</label>
-                    <input type="date" name='date-applied' id='date-applied' />
+                    <label htmlFor="date_applied">Date Applied</label>
+                    <input type="date" name='date_applied' id='date_applied' required/>
                     </div>
                     <div>
-                    <label for="company-name">Company Name</label>
-                    <input type="text" name='company-name' id='company-name' placeholder='Company Name' />
+                    <label htmlFor="company_name">Company Name</label>
+                    <input type="text" name='company_name' id='company_name' placeholder='Company Name' required/>
                     </div>
                     <div>
-                    <label for="position">Position Title</label>
-                    <input type="text" name='position' id='position' />
+                    <label htmlFor="position">Position Title</label>
+                    <input type="text" name='position' id='position' required/>
                     </div>
                     <div>
-                    <label for="job-description-link">Job Description Link</label>
-                    <input type="text" name='job-description-link' id='job-description-link' />
+                    <label htmlFor="job_description_link">Job Description Link</label>
+                    <input type="text" name='job_description_link' id='job_description_link' required/>
                     </div>
                     <div>
-                    <label for="tech">Technologies Used</label>
-                    <input type="text" name="tech" id="tech" />
+                    <label htmlFor="tech">Technologies Used</label>
+                    <input type="text" name="tech" id="tech" required />
                     </div>
                     <div>
-                        <label for="intro-call">Intro Call?</label>
+                        <label htmlFor="intro_call">Intro Call?</label>
                         <label>
-                            <input type="radio" value="yes" name="intro-call"/>
+                            <input type="radio" onChange={props.handleCall}  value="yes" name="intro_call"/>
                             Yes
                         </label>
                         <label>
-                            <input type="radio" name="intro-call" checked={true} />
+                            <input type="radio" onChange={props.handleCall} value="no" name="intro_call" />
                             No
                         </label>
                     </div>
-                    <button type='submit'>Sign Up</button>
+                    <button type='submit'>Submit</button>
                 </form>
             </section>
         </>
