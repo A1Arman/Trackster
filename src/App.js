@@ -5,6 +5,8 @@ import LandingPageNav from './components/LandingPageNav/LandingPageNav';
 import LeadGenPage from './components/LeadGenPage/LeadGenPage';
 import AppNav from './components/AppNav/AppNav';
 import SignupPage from './components/SignupPage/SignupPage';
+import NetworkingPage from './components/NetworkingPage/NetworkingPage';
+import NetworkingForm from './components/NetworkingForm/NetworkingForm';
 import './App.css';
 
 class App extends Component {
@@ -71,6 +73,8 @@ class App extends Component {
             <Route exact path='/' component={LandingPageNav} />
             <Route exact path='/signup' component={LandingPageNav} />
             <Route exact path='/leadgen' component={AppNav} />
+            <Route exact path='/networking' component={NetworkingPage} />
+            <Route exact path='/new-event' component={NetworkingForm} />
           </nav>
         </header>
         <main>

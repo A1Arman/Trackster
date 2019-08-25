@@ -8,6 +8,7 @@ function LandingPageNav() {
                 <li>Log In</li>
                 <li><Link to='/signup'>Sign Up</Link></li>
                 <li><Link to='/leadgen'>Lead Generation</Link></li>
+                <li><Link to='/networking'>Networking</Link></li>
             </ul>
         </>
     )
