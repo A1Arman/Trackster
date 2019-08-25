@@ -1,5 +1,6 @@
 import React from 'react';
 import AppNav from '../AppNav/AppNav';
+import EventDetails from '../EventDetails/EventDetails';
 // import NetworkingForm from '../NetworkingForm/NetworkingForm';
 import {Link} from 'react-router-dom';
 
@@ -21,6 +22,9 @@ class NetworkingPage extends React.Component {
                         <li>Tech Startups Event</li>
                         <li>Intro to Python</li>
                     </ul> 
+            </section>
+            <section>
+                <EventDetails />
             </section>
             </main>
         )
