@@ -8,7 +8,6 @@ function AppNav() {
                 <li>Log Out</li>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/leadgen'>Lead Generation</Link></li>
-                
             </ul>
         </>
     )
