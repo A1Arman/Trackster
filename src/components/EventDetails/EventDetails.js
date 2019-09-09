@@ -10,6 +10,7 @@ export function EventDetails(props){
                         <div>{props.eventLocation}</div>
                         <div>{props.eventDate}</div>
                         <div>{props.eventTime}</div>
+                        <div>{props.eventNotes}</div>
                 </div>
             </li>
         );
