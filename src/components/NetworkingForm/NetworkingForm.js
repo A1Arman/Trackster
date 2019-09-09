@@ -13,7 +13,13 @@ class NetworkingForm extends React.Component{
 
         //binding
         this.handleAddEventSubmit = this.handleAddEventSubmit.bind(this);
-
+        this.handleEventTitleChange = this.handleEventTitleChange.bind(this);
+        this.handleEventHostTitleChange = this.handleEventHostTitleChange.bind(this);
+        this.handleEventLocationChange = this.handleEventLocationChange.bind(this);
+        this.handleEventDateChange = this.handleEventDateChange.bind(this);
+        this.handleEventTimeChange = this.handleEventTimeChange.bind(this);
+        this.handleAddEventSubmit = this.handleAddEventSubmit.bind(this);
+        
     }
 
     handleEventTitleChange(event){
