@@ -6,6 +6,12 @@ import {Link} from 'react-router-dom';
 
 class NetworkingPage extends React.Component {
     render(){
+
+        // map through the list of all events
+        const events = this.props.events.map((event, index)=>(
+            <EventDetails {...event} key={index} />
+        ));
+
         return(
             <main>
             <AppNav />
@@ -17,10 +23,7 @@ class NetworkingPage extends React.Component {
             <section className="networking-events">
                 <h1>Upcoming Networking Events</h1>
                     <ul className="networking-events-list">
-                        <li>Chicago Hackathon</li>
-                        <li>Weekly JavaScript Practice</li>
-                        <li>Tech Startups Event</li>
-                        <li>Intro to Python</li>
+                        {events}
                     </ul> 
             </section>
             <section>
