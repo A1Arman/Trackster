@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 //still need to: 
 // add to initial state in reducers/index.js

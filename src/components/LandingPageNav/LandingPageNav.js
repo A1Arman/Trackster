@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GoogleAuth from '../../GoogleAuth';
 
 function LandingPageNav() {
     return (
         <>
             <ul>
-                <li>Log In</li>
+                <GoogleAuth />
                 <li><Link to='/signup'>Sign Up</Link></li>
                 <li><Link to='/leadgen'>Lead Generation</Link></li>
                 <li><Link to='/networking'>Networking</Link></li>

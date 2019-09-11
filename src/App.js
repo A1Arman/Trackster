@@ -12,61 +12,6 @@ import ContactsForm from './components/ContactsForm/ContactsForm';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      leads: [],
-      introCall: null,
-      user: {}
-    }
-  }
-
-  leadGenSubmit = e => {
-    e.preventDefault();
-    const lead = {
-      dateApplied: e.target.date_applied.value,
-      companyName: e.target.company_name.value,
-      positionTitle: e.target.position.value,
-      jobDescription: e.target.job_description_link.value,
-      techUsed: e.target.tech.value,
-      introCall: this.state.introCall
-    }
-    this.addLead(lead);
-    this.clearForm();
-    console.log(this.state.leads)
-  }
-
-  handleSignup = e => {
-    e.preventDefault();
-    const user = {
-      first_name: e.target.first_name.value,
-      last_name: e.target.last_name.value,
-      email: e.target.email.value,
-      password: e.target.password.value
-    }
-    this.setState({
-      user
-    })
-    document.getElementById('signup-form').reset();
-  }
-
-  addLead = lead => {
-    this.setState({
-      leads: [lead, ...this.state.leads]
-    })
-  }
-
-  clearForm = () => {
-    const form = document.getElementById('leadgen-form');
-    form.reset();
-  }
-
-  handleCall = (e) => {
-    this.setState({
-      introCall: e.target.value
-    })
-  }
-
   render() {
     return (
       <div className="App">
@@ -83,8 +28,8 @@ class App extends Component {
         </header>
         <main>
           <Route exact path='/' component={LandingPage} />
-          <Route exact path='/leadgen' render={(props) => <LeadGenPage {...props} leadGenSubmit={(event) => this.leadGenSubmit(event)} handleCall={(event) => this.handleCall(event)}/>}/>
-          <Route exact path='/signup' render={(props) => <SignupPage {...props} handleSignup={(event) => this.handleSignup(event)}/>}/>
+          <Route exact path='/leadgen' component={LeadGenPage} />
+          <Route exact path='/signup' component={SignupPage} />
         </main>
         <footer>
 
