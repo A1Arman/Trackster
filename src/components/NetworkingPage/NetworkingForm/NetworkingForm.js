@@ -1,6 +1,7 @@
 import React from 'react';
 import { reduxForm , Field } from 'redux-form';
 import renderFieldNetworking from '../renderFieldNetworking';
+import validate from '../validateNetwork';
 
 class NetworkingForm extends React.Component {
     onSubmit(values) {
@@ -34,7 +35,7 @@ class NetworkingForm extends React.Component {
                 <Field 
                     name="eventDate" 
                     id="eventDate" 
-                    type="text" 
+                    type="date" 
                     component={renderFieldNetworking} 
                 />
                 Event Date
@@ -44,7 +45,7 @@ class NetworkingForm extends React.Component {
                 <Field 
                     name="eventTime" 
                     id="eventTime" 
-                    type="text" 
+                    type="time" 
                     component={renderFieldNetworking} 
                 />
                 Event Time
@@ -58,5 +59,6 @@ class NetworkingForm extends React.Component {
 }
 
 export default reduxForm({
-    form: 'networking'
+    form: 'networking',
+    validate
 })(NetworkingForm);

@@ -13,9 +13,9 @@ class ContactsPage extends React.Component{
                     <h2>Keep Track and Remember Your Connections!</h2>
                 </header>
                 <Link to='/new-contact'>Add New Contact</Link>
-                <section class="connections">
+                <section className="connections">
                     <h1>My Connections</h1>
-                    <ul class="connections-list">
+                    <ul className="connections-list">
                         <li>Dwight Schrute</li>
                         <li>Leslie Knope</li>
                         <li>Nick Miller</li>

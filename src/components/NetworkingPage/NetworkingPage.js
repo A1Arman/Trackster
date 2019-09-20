@@ -16,24 +16,6 @@ class NetworkingPage extends React.Component {
             <div>
                 <NetworkingForm />
             </div>
-
-            // <main>
-            // <AppNav />
-            // <header>
-            //     <h1>My Networking Events</h1>
-            //     <h2>Keep Track of your upcoming and past events!</h2>
-            // </header>
-            // <Link to='/new-event'>Add New Event</Link>
-            // <section className="networking-events">
-            //     <h1>Upcoming Networking Events</h1>
-            //         <ul className="networking-events-list">
-            //             {/* {events} */}
-            //         </ul> 
-            // </section>
-            // <section>
-            //     <EventDetails />
-            // </section>
-            // </main>
         )
     }
 
