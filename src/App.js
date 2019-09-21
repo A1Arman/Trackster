@@ -19,8 +19,8 @@ class App extends Component {
             <Route exact path='/' component={LandingPageNav} />
             <Route exact path='/signup' component={LandingPageNav} />
             <Route exact path='/leadgen' component={AppNav} />
-            <Route exact path='/networking' component={NetworkingPage} />
-            <Route exact path='/contacts' component={ContactsPage} />
+            {/* <Route exact path='/networking' component={NetworkingPage} />
+            <Route exact path='/contacts' component={ContactsPage} /> */}
             <Route exact path='/new-contact' component={ContactsForm} />
           </nav>
         </header>
@@ -28,6 +28,8 @@ class App extends Component {
           <Route exact path='/' component={LandingPage} />
           <Route exact path='/leadgen' component={LeadGenPage} />
           <Route exact path='/signup' component={SignupPage} />
+          <Route exact path='/networking' component={NetworkingPage} />
+          <Route exact path='/contacts' component={ContactsPage} />
         </main>
         <footer>
 
