@@ -6,7 +6,6 @@ import LeadGenPage from './components/LeadGenPage/LeadGenPage';
 import AppNav from './components/AppNav/AppNav';
 import SignupPage from './components/SignupPage/SignupPage';
 import NetworkingPage from './components/NetworkingPage/NetworkingPage';
-import NetworkingForm from './components/NetworkingForm/NetworkingForm';
 import ContactsPage from './components/ContactsPage/ContactsPage';
 import ContactsForm from './components/ContactsForm/ContactsForm';
 import './App.css';
@@ -20,9 +19,8 @@ class App extends Component {
             <Route exact path='/' component={LandingPageNav} />
             <Route exact path='/signup' component={LandingPageNav} />
             <Route exact path='/leadgen' component={AppNav} />
-            <Route exact path='/networking' component={NetworkingPage} />
-            <Route exact path='/new-event' component={NetworkingForm} />
-            <Route exact path='/contacts' component={ContactsPage} />
+            {/* <Route exact path='/networking' component={NetworkingPage} />
+            <Route exact path='/contacts' component={ContactsPage} /> */}
             <Route exact path='/new-contact' component={ContactsForm} />
           </nav>
         </header>
@@ -30,6 +28,8 @@ class App extends Component {
           <Route exact path='/' component={LandingPage} />
           <Route exact path='/leadgen' component={LeadGenPage} />
           <Route exact path='/signup' component={SignupPage} />
+          <Route exact path='/networking' component={NetworkingPage} />
+          <Route exact path='/contacts' component={ContactsPage} />
         </main>
         <footer>
 
