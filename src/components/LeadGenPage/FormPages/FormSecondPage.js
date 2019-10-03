@@ -25,12 +25,6 @@ const FormSecondPage = props => {
                 component={renderField}
                 label='Phone Screen Date'
             />
-            <Field
-                name='phoneScreen'
-                type='date'
-                component={renderField}
-                label='Phone Screen Date'
-            />
             <div>
                 <button type='button' className='previous' onClick={prevPage}>
                     Previous

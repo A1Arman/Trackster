@@ -4,55 +4,38 @@ import renderFieldNetworking from '../renderFieldNetworking';
 import validate from '../validateNetwork';
 
 class NetworkingForm extends React.Component {
-    onSubmit(values) {
-        console.log(values);
-    }
-
     render(){
         return(
             <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
-                <label htmlFor="eventTitle">
                 <Field 
                     name="eventTitle"
                     id="eventTitle"
                     type="text"
                     component={renderFieldNetworking}
+                    label="Event Title"
                 />
-                Event Title
-                </label>
-
-                <label htmlFor="eventLocation">
                 <Field 
                     name="eventLocation" 
                     id="eventLocation" 
                     type="text" 
                     component={renderFieldNetworking} 
+                    label="Event Location"
                 />
-                Event Location
-                </label>
-
-                <label htmlFor="eventDate">
                 <Field 
                     name="eventDate" 
                     id="eventDate" 
                     type="date" 
                     component={renderFieldNetworking} 
+                    label="Event Date"
                 />
-                Event Date
-                </label>
-
-                <label htmlFor="eventTime">
                 <Field 
                     name="eventTime" 
                     id="eventTime" 
                     type="time" 
-                    component={renderFieldNetworking} 
+                    component={renderFieldNetworking}
+                    label="Event time" 
                 />
-                Event Time
-                </label>
-
                 <button type="submit">Submit Event</button>
-
             </form>
         );
     }

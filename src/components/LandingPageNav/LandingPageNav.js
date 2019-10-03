@@ -7,7 +7,6 @@ function LandingPageNav() {
         <>
             <ul>
                 <GoogleAuth />
-                <li><Link to='/signup'>Sign Up</Link></li>
                 <li><Link to='/leadgen'>Lead Generation</Link></li>
                 <li><Link to='/networking'>Networking</Link></li>
                 <li><Link to ='/contacts'>Contacts</Link></li>

@@ -11,56 +11,41 @@ class ContactsForm extends React.Component{
     render(){
         return(
             <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
-                <label htmlFor="fullName">
-                    <Field
-                        name="fullName"
-                        id="fullName"
-                        type="text"
-                        component={renderFieldContacts}
-                    />
-                    Contact's Full Name
-                </label>
-
-                <label htmlFor="companyName">
-                    <Field
-                        name="companyName"
-                        id="companyName"
-                        type="text"
-                        component={renderFieldContacts}
-                    />
-                    Contact's Company
-                </label>
-
-                <label htmlFor="contactEmail">
-                    <Field
-                        name="contactEmail"
-                        id="contactEmail"
-                        type="text"
-                        component={renderFieldContacts}
-                    />
-                    Contact's Email
-                </label>
-
-                <label htmlFor="contactPhone">
-                    <Field
-                        name="contactPhone"
-                        id="contactPhone"
-                        type="text"
-                        component={renderFieldContacts}
-                    />
-                    Contact's Phone Number
-                </label>
-
-                <label htmlFor="contactNotes">
-                    <Field
-                        name="contactNotes"
-                        id="contactNotes"
-                        type="text"
-                        component={renderFieldContacts}
-                    />
-                    Additional Notes
-                </label>
-
+                <Field
+                    name="fullName"
+                    id="fullName"
+                    type="text"
+                    component={renderFieldContacts}
+                    label="Contact's Full Name"
+                />
+                <Field
+                    name="companyName"
+                    id="companyName"
+                    type="text"
+                    component={renderFieldContacts}
+                    label="Contact's Company"
+                />
+                <Field
+                    name="contactEmail"
+                    id="contactEmail"
+                    type="text"
+                    component={renderFieldContacts}
+                    label="Contact's Email"
+                />
+                <Field
+                    name="contactPhone"
+                    id="contactPhone"
+                    type="text"
+                    component={renderFieldContacts}
+                    label="Contact's Phone Number"
+                />
+                <Field
+                    name="contactNotes"
+                    id="contactNotes"
+                    type="text"
+                    component={renderFieldContacts}
+                    label="Additional Notes"
+                />
                 <button type="submit">Submit</button>
             </form>
         )

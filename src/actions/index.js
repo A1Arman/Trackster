@@ -1,9 +1,9 @@
 import { SIGN_IN, SIGN_OUT, CREATE_LEAD, GET_LEADS} from './types';
 
-export const signIn = userId => {
+export const signIn = (userId, fullName) => {
     return {
         type: SIGN_IN,
-        payload: userId
+        payload: {userId, fullName}
     };
 };
 
