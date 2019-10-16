@@ -16,7 +16,8 @@ export const signIn = (userId, fullName) => dispatch => {
             }
         })
         .then(user => {
-            dispatch({type: SIGN_IN, payload: {userId: user.user_id, fullName: user.fullName}});
+            TokenService.saveAuthToken(user.authToken)
+            dispatch({type: SIGN_IN, payload: {userId, fullName}});
         })
         .catch(err => {
             console.log(err)
@@ -24,7 +25,7 @@ export const signIn = (userId, fullName) => dispatch => {
 };
 
 export const signOut = () => dispatch => {
-    TokenService.clearAuthToken()
+    TokenService.clearAuthToken();
     dispatch({ type: SIGN_OUT })
 };
 

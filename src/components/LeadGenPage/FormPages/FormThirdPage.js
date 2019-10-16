@@ -23,7 +23,7 @@ const FormThirdPage = props => {
                 label='Technical Interview Date'
             />
             <Field
-                name='FinalInterview'
+                name='finalInterview'
                 type='date'
                 component={renderField}
                 label='Final Interview Date'

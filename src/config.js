@@ -1,3 +1,3 @@
 export default {
-    TOKEN_KEY: process.env.REACT_APP_TOKEN_KEY
+    TOKEN_KEY: process.env.REACT_APP_TOKEN_KEY || 'trackster-auth-token'
 }
