@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import { reducer as reduxFormReducer } from 'redux-form';
 import authReducer from './authReducer';
+import leadgenReducer from './leadgenReducer';
 
 export default combineReducers({
     auth: authReducer,
-    form: reduxFormReducer
-})
+    form: reduxFormReducer,
+    leadgen: leadgenReducer
+});

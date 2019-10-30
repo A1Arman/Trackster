@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createLead } from '../../actions';
 import FormFirstPage from './FormPages/FormFirstPage';
 import FormSecondPage from './FormPages/FormSecondPage';
 import FormThirdPage from './FormPages/FormThirdPage';
@@ -21,7 +23,7 @@ class LeadGenPage extends Component {
     }
 
     onSubmit = (values) => {
-        console.log(values)
+        this.props.createLead(values)
     }
 
     render() {
@@ -36,4 +38,4 @@ class LeadGenPage extends Component {
     }  
 };
 
-export default LeadGenPage;
+export default connect(null, { createLead })(LeadGenPage);
